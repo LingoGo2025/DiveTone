@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#075f91">
+  <meta name="description" content="Download sample underwater media for DiveTone.">
+  <title>DiveTone Sample Media</title>
+  <style>
+    :root{color-scheme:light dark;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;--bg:#eef6fa;--card:#fff;--text:#102a38;--muted:#5d7480;--line:#d3e2e9;--accent:#087fbd;--accent2:#075f91;--soft:#e5f4fb;--shadow:#06304918}
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(circle at 50% -10%,#c9edf9 0,transparent 34rem),var(--bg);color:var(--text);line-height:1.6}
+    main{width:min(980px,calc(100% - 32px));margin:0 auto;padding:max(24px,env(safe-area-inset-top)) 0 max(48px,env(safe-area-inset-bottom))}
+    header{position:relative;overflow:hidden;padding:clamp(26px,6vw,52px);border-radius:28px;background:linear-gradient(145deg,#063f5d,#087fbd 58%,#14a4cf);color:#fff;box-shadow:0 18px 48px #02334b38;text-align:center}
+    header:after{content:"";position:absolute;right:-70px;bottom:-100px;width:280px;height:280px;border:44px solid #fff1;border-radius:50%}
+    .logo{position:relative;z-index:1;width:88px;height:88px;object-fit:contain;filter:drop-shadow(0 8px 14px #001f3266)}
+    h1{position:relative;z-index:1;margin:12px 0 8px;font-size:clamp(2rem,7vw,3.2rem);line-height:1.1;letter-spacing:-.02em}
+    .subtitle{position:relative;z-index:1;margin:0 auto;max-width:620px;font-size:clamp(1rem,2.5vw,1.18rem);opacity:.9}
+    .toolbar{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin:18px 2px}
+    label{font-size:.92rem;color:var(--muted)}
+    select{max-width:220px;padding:10px 36px 10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--text);font:inherit}
+    .intro,.steps,.notice{padding:clamp(20px,4vw,32px);border:1px solid var(--line);border-radius:22px;background:var(--card);box-shadow:0 10px 28px var(--shadow)}
+    .intro h2,.steps h2,.notice h2{margin:0 0 8px;font-size:1.25rem}
+    .intro p,.notice p{margin:0;color:var(--muted)}
+    .steps{margin-top:18px}
+    ol{margin:12px 0 0;padding-inline-start:1.45rem}
+    li+li{margin-top:8px}
+    .media-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
+    .media-card{display:flex;min-width:0;flex-direction:column;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:var(--card);box-shadow:0 12px 34px var(--shadow)}
+    .preview{position:relative;aspect-ratio:4/3;background:#06171f;overflow:hidden}
+    .preview img,.preview video{display:block;width:100%;height:100%;object-fit:cover}
+    .type{position:absolute;top:12px;left:12px;padding:5px 10px;border-radius:999px;background:#001d2bbd;color:#fff;font-size:.78rem;font-weight:700;backdrop-filter:blur(8px)}
+    .card-body{display:flex;flex:1;flex-direction:column;padding:20px}
+    .card-body h2{margin:0;font-size:1.3rem}
+    .card-body p{margin:7px 0 18px;color:var(--muted);font-size:.95rem}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:8px;margin-top:auto;padding:12px 18px;border-radius:14px;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#fff;text-decoration:none;font-weight:700;box-shadow:0 8px 20px #087fbd3b}
+    .button:focus-visible,select:focus-visible{outline:3px solid #f4b942;outline-offset:3px}
+    .notice{margin-top:18px;background:var(--soft)}
+    footer{text-align:center;margin-top:24px;color:var(--muted);font-size:.86rem}
+    [dir=rtl] .type{left:auto;right:12px}
+    [dir=rtl] .toolbar{justify-content:flex-start}
+    @media(max-width:680px){main{width:min(100% - 22px,980px)}header{border-radius:22px}.media-grid{grid-template-columns:1fr}.toolbar{justify-content:space-between}.toolbar label{text-align:start}.media-card{border-radius:20px}}
+    @media(prefers-color-scheme:dark){:root{--bg:#06141b;--card:#0f252f;--text:#edf8fc;--muted:#abc0ca;--line:#294651;--accent:#26a9e2;--accent2:#087fbd;--soft:#0c2b38;--shadow:#0007}body{background:radial-gradient(circle at 50% -10%,#0a4157 0,transparent 34rem),var(--bg)}}
+    @media(prefers-reduced-motion:no-preference){.media-card,.intro,.steps,.notice{animation:rise .45s ease-out both}.media-card:nth-child(2){animation-delay:.08s}@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}}
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <img class="logo" src="https://lingogo2025.github.io/DiveTone/DiveTone_Logo_Dark_1024.png" alt="DiveTone" width="88" height="88" decoding="async" fetchpriority="high" onerror="this.hidden=true">
+    <h1 id="title"></h1>
+    <p class="subtitle" id="subtitle"></p>
+  </header>
+
+  <div class="toolbar">
+    <label id="languageLabel" for="language"></label>
+    <select id="language" aria-label="Language"></select>
+  </div>
+
+  <section class="intro">
+    <h2 id="introTitle"></h2>
+    <p id="introText"></p>
+  </section>
+
+  <section class="steps">
+    <h2 id="stepsTitle"></h2>
+    <ol id="stepsList"></ol>
+  </section>
+
+  <div class="media-grid">
+    <article class="media-card">
+      <div class="preview">
+        <img src="https://lingogo2025.github.io/DiveTone/DiveToneSample/DiveToneSample.jpg" alt="DiveTone underwater sample photo" loading="eager" decoding="async">
+        <span class="type">JPG</span>
+      </div>
+      <div class="card-body">
+        <h2 id="photoTitle"></h2>
+        <p id="photoText"></p>
+        <a class="button" id="photoButton" href="https://lingogo2025.github.io/DiveTone/DiveToneSample/DiveToneSample.jpg" target="_blank" rel="noopener"></a>
+      </div>
+    </article>
+
+    <article class="media-card">
+      <div class="preview">
+        <video controls playsinline preload="metadata" poster="https://lingogo2025.github.io/DiveTone/DiveToneSample/DiveToneSampleVideoPoster.jpg">
+          <source src="https://lingogo2025.github.io/DiveTone/DiveToneSample/DiveToneSample.mov" type="video/quicktime">
+        </video>
+        <span class="type">MOV</span>
+      </div>
+      <div class="card-body">
+        <h2 id="videoTitle"></h2>
+        <p id="videoText"></p>
+        <a class="button" id="videoButton" href="https://lingogo2025.github.io/DiveTone/DiveToneSample/DiveToneSample.mov" target="_blank" rel="noopener"></a>
+      </div>
+    </article>
+  </div>
+
+  <section class="notice">
+    <h2 id="noticeTitle"></h2>
+    <p id="noticeText"></p>
+  </section>
+
+  <footer><span id="privacyText"></span><br>© 2026 DiveTone</footer>
+</main>
+
+<script>
+const languages={
+  "zh-Hant":"繁體中文","zh-Hans":"简体中文","en":"English","ja":"日本語","ko":"한국어",
+  "es":"Español","fr":"Français","de":"Deutsch","it":"Italiano","pt-BR":"Português (Brasil)",
+  "pt-PT":"Português (Portugal)","nl":"Nederlands","th":"ไทย","id":"Bahasa Indonesia",
+  "ms":"Bahasa Melayu","fil":"Filipino","vi":"Tiếng Việt","ar":"العربية","tr":"Türkçe","el":"Ελληνικά"
+};
+
+const T={
+"zh-Hant":{title:"DiveTone 示範素材",subtitle:"下載水下照片與影片，立即體驗 DiveTone。",language:"語言",introTitle:"開始之前",intro:"這些素材僅供試用 DiveTone。請先儲存到系統「照片」App，再回到 DiveTone 加入影像。",stepsTitle:"如何使用",steps:["開啟下方的照片或影片。","使用 Safari 的分享選單，選擇「儲存影像」或「儲存影片」。","回到 DiveTone，點擊「加入」並從照片圖庫選取素材。"],photoTitle:"示範照片",photoText:"適合比較經典、自然與鮮豔風格，以及主體範圍調整。",photoButton:"開啟照片",videoTitle:"示範影片",videoText:"適合測試影片預覽、調色與匯出流程。",videoButton:"開啟影片",noticeTitle:"儲存方式",notice:"網站無法自動寫入你的相簿。若點擊後只看到預覽，請點 Safari 的分享按鈕，再選擇儲存到「照片」。",privacy:"本站不會上傳你的照片，也不使用追蹤或分析工具。"},
+"zh-Hans":{title:"DiveTone 示例素材",subtitle:"下载水下照片与视频，立即体验 DiveTone。",language:"语言",introTitle:"开始之前",intro:"这些素材仅用于试用 DiveTone。请先保存到系统“照片”App，再返回 DiveTone 添加影像。",stepsTitle:"使用方法",steps:["打开下方的照片或视频。","使用 Safari 的共享菜单，选择“存储图像”或“存储视频”。","返回 DiveTone，点击“添加”并从照片图库选择素材。"],photoTitle:"示例照片",photoText:"适合比较经典、自然与鲜艳风格，以及主体范围调整。",photoButton:"打开照片",videoTitle:"示例视频",videoText:"适合测试视频预览、调色与导出流程。",videoButton:"打开视频",noticeTitle:"保存方法",notice:"网站无法自动写入你的相册。如果点击后只显示预览，请点击 Safari 的共享按钮，再选择保存到“照片”。",privacy:"本站不会上传你的照片，也不使用跟踪或分析工具。"},
+"en":{title:"DiveTone Sample Media",subtitle:"Download an underwater photo and video to try DiveTone right away.",language:"Language",introTitle:"Before you begin",intro:"These files are provided only for trying DiveTone. Save them to the system Photos app first, then return to DiveTone and add them.",stepsTitle:"How to use",steps:["Open the photo or video below.","Use Safari’s Share menu and choose Save Image or Save Video.","Return to DiveTone, tap Add, and select the media from your photo library."],photoTitle:"Sample photo",photoText:"Ideal for comparing Classic, Natural, and Vivid styles and trying subject-area controls.",photoButton:"Open photo",videoTitle:"Sample video",videoText:"Use it to test video preview, color adjustment, and export.",videoButton:"Open video",noticeTitle:"Saving to Photos",notice:"A website cannot add files to your library automatically. If the file opens as a preview, tap Safari’s Share button and save it to Photos.",privacy:"This site does not upload your photos and uses no tracking or analytics."},
+"ja":{title:"DiveTone サンプル素材",subtitle:"水中写真と動画をダウンロードして、DiveTone をすぐにお試しください。",language:"言語",introTitle:"はじめに",intro:"この素材は DiveTone の試用専用です。まずシステムの「写真」App に保存し、DiveTone に戻って追加してください。",stepsTitle:"使い方",steps:["下の写真または動画を開きます。","Safari の共有メニューから「画像を保存」または「ビデオを保存」を選びます。","DiveTone に戻り、「追加」をタップして写真ライブラリから素材を選びます。"],photoTitle:"サンプル写真",photoText:"クラシック、ナチュラル、ビビッドの比較や被写体範囲の調整に適しています。",photoButton:"写真を開く",videoTitle:"サンプル動画",videoText:"動画プレビュー、色調整、書き出しのテストに使用できます。",videoButton:"動画を開く",noticeTitle:"「写真」への保存",notice:"Web サイトから写真ライブラリへ自動保存はできません。プレビューが開いた場合は Safari の共有ボタンから「写真」に保存してください。",privacy:"このサイトは写真をアップロードせず、追跡・解析ツールも使用しません。"},
+"ko":{title:"DiveTone 샘플 미디어",subtitle:"수중 사진과 동영상을 내려받아 DiveTone을 바로 체험해 보세요.",language:"언어",introTitle:"시작하기 전에",intro:"이 파일은 DiveTone 체험용입니다. 먼저 시스템 사진 앱에 저장한 뒤 DiveTone으로 돌아와 추가하세요.",stepsTitle:"사용 방법",steps:["아래 사진 또는 동영상을 엽니다.","Safari 공유 메뉴에서 이미지 저장 또는 비디오 저장을 선택합니다.","DiveTone으로 돌아가 추가를 누르고 사진 보관함에서 미디어를 선택합니다."],photoTitle:"샘플 사진",photoText:"클래식, 내추럴, 비비드 스타일과 피사체 영역 조정을 비교하기 좋습니다.",photoButton:"사진 열기",videoTitle:"샘플 동영상",videoText:"동영상 미리보기, 색상 조정 및 내보내기를 테스트할 수 있습니다.",videoButton:"동영상 열기",noticeTitle:"사진 앱에 저장",notice:"웹사이트는 사진 보관함에 자동 저장할 수 없습니다. 미리보기만 열리면 Safari 공유 버튼을 눌러 사진 앱에 저장하세요.",privacy:"이 사이트는 사진을 업로드하지 않으며 추적 또는 분석 도구를 사용하지 않습니다."},
+"es":{title:"Contenido de muestra de DiveTone",subtitle:"Descarga una foto y un vídeo submarinos para probar DiveTone.",language:"Idioma",introTitle:"Antes de empezar",intro:"Estos archivos solo sirven para probar DiveTone. Guárdalos primero en Fotos y vuelve a DiveTone para añadirlos.",stepsTitle:"Cómo usarlo",steps:["Abre la foto o el vídeo de abajo.","En el menú Compartir de Safari, elige Guardar imagen o Guardar vídeo.","Vuelve a DiveTone, pulsa Añadir y selecciona el archivo en tu fototeca."],photoTitle:"Foto de muestra",photoText:"Ideal para comparar los estilos Clásico, Natural y Vívido y ajustar el área del sujeto.",photoButton:"Abrir foto",videoTitle:"Vídeo de muestra",videoText:"Permite probar la vista previa, el ajuste de color y la exportación de vídeo.",videoButton:"Abrir vídeo",noticeTitle:"Guardar en Fotos",notice:"Un sitio web no puede añadir archivos automáticamente a tu fototeca. Si aparece una vista previa, usa Compartir en Safari y guárdalo en Fotos.",privacy:"Este sitio no carga tus fotos ni utiliza seguimiento o analítica."},
+"fr":{title:"Médias d’exemple DiveTone",subtitle:"Téléchargez une photo et une vidéo sous-marines pour essayer DiveTone.",language:"Langue",introTitle:"Avant de commencer",intro:"Ces fichiers servent uniquement à essayer DiveTone. Enregistrez-les d’abord dans Photos, puis revenez dans DiveTone pour les ajouter.",stepsTitle:"Mode d’emploi",steps:["Ouvrez la photo ou la vidéo ci-dessous.","Dans le menu Partager de Safari, choisissez Enregistrer l’image ou Enregistrer la vidéo.","Revenez dans DiveTone, touchez Ajouter et sélectionnez le média dans Photos."],photoTitle:"Photo d’exemple",photoText:"Idéale pour comparer les styles Classique, Naturel et Vif et tester la zone du sujet.",photoButton:"Ouvrir la photo",videoTitle:"Vidéo d’exemple",videoText:"Permet de tester l’aperçu, le réglage des couleurs et l’exportation vidéo.",videoButton:"Ouvrir la vidéo",noticeTitle:"Enregistrement dans Photos",notice:"Un site web ne peut pas ajouter automatiquement un fichier à votre photothèque. Si un aperçu s’ouvre, utilisez Partager dans Safari puis enregistrez-le dans Photos.",privacy:"Ce site ne téléverse pas vos photos et n’utilise aucun suivi ni outil d’analyse."},
+"de":{title:"DiveTone-Beispielmedien",subtitle:"Lade ein Unterwasserfoto und -video herunter und probiere DiveTone aus.",language:"Sprache",introTitle:"Vor dem Start",intro:"Diese Dateien dienen nur zum Testen von DiveTone. Speichere sie zuerst in der Fotos-App und füge sie danach in DiveTone hinzu.",stepsTitle:"So geht’s",steps:["Öffne das Foto oder Video unten.","Wähle im Teilen-Menü von Safari „Bild sichern“ oder „Video sichern“.","Kehre zu DiveTone zurück, tippe auf „Hinzufügen“ und wähle die Datei aus der Fotomediathek."],photoTitle:"Beispielfoto",photoText:"Ideal zum Vergleichen der Stile Klassisch, Natürlich und Lebhaft sowie der Motivbereich-Steuerung.",photoButton:"Foto öffnen",videoTitle:"Beispielvideo",videoText:"Zum Testen von Videovorschau, Farbanpassung und Export.",videoButton:"Video öffnen",noticeTitle:"In Fotos sichern",notice:"Eine Website kann Dateien nicht automatisch zur Mediathek hinzufügen. Wird nur eine Vorschau angezeigt, nutze „Teilen“ in Safari und sichere die Datei in Fotos.",privacy:"Diese Website lädt keine Fotos hoch und verwendet weder Tracking noch Analysen."},
+"it":{title:"Contenuti di esempio DiveTone",subtitle:"Scarica una foto e un video subacquei per provare subito DiveTone.",language:"Lingua",introTitle:"Prima di iniziare",intro:"Questi file servono solo per provare DiveTone. Salvali prima nell’app Foto, quindi torna in DiveTone e aggiungili.",stepsTitle:"Come si usa",steps:["Apri la foto o il video qui sotto.","Nel menu Condividi di Safari scegli Salva immagine o Salva video.","Torna in DiveTone, tocca Aggiungi e seleziona il contenuto dalla libreria Foto."],photoTitle:"Foto di esempio",photoText:"Ideale per confrontare gli stili Classico, Naturale e Vivace e provare l’area del soggetto.",photoButton:"Apri foto",videoTitle:"Video di esempio",videoText:"Utile per provare anteprima, regolazione colore ed esportazione video.",videoButton:"Apri video",noticeTitle:"Salvataggio in Foto",notice:"Un sito non può aggiungere automaticamente file alla libreria. Se si apre un’anteprima, usa Condividi in Safari e salva in Foto.",privacy:"Questo sito non carica le tue foto e non usa tracciamento o analisi."},
+"pt-BR":{title:"Mídia de exemplo do DiveTone",subtitle:"Baixe uma foto e um vídeo subaquáticos para experimentar o DiveTone.",language:"Idioma",introTitle:"Antes de começar",intro:"Estes arquivos servem apenas para testar o DiveTone. Salve-os primeiro no app Fotos e depois volte ao DiveTone para adicioná-los.",stepsTitle:"Como usar",steps:["Abra a foto ou o vídeo abaixo.","No menu Compartilhar do Safari, escolha Salvar Imagem ou Salvar Vídeo.","Volte ao DiveTone, toque em Adicionar e selecione a mídia na fototeca."],photoTitle:"Foto de exemplo",photoText:"Ideal para comparar os estilos Clássico, Natural e Vívido e testar a área do assunto.",photoButton:"Abrir foto",videoTitle:"Vídeo de exemplo",videoText:"Use para testar prévia, ajuste de cor e exportação de vídeo.",videoButton:"Abrir vídeo",noticeTitle:"Salvar no Fotos",notice:"Um site não pode adicionar arquivos automaticamente à fototeca. Se abrir uma prévia, use Compartilhar no Safari e salve no Fotos.",privacy:"Este site não envia suas fotos e não usa rastreamento nem análise."},
+"pt-PT":{title:"Multimédia de exemplo do DiveTone",subtitle:"Descarregue uma fotografia e um vídeo subaquáticos para experimentar o DiveTone.",language:"Idioma",introTitle:"Antes de começar",intro:"Estes ficheiros destinam-se apenas a testar o DiveTone. Guarde-os primeiro na app Fotografias e volte ao DiveTone para os adicionar.",stepsTitle:"Como utilizar",steps:["Abra a fotografia ou o vídeo abaixo.","No menu Partilhar do Safari, escolha Guardar imagem ou Guardar vídeo.","Volte ao DiveTone, toque em Adicionar e selecione o conteúdo na fototeca."],photoTitle:"Fotografia de exemplo",photoText:"Ideal para comparar os estilos Clássico, Natural e Vívido e testar a área do motivo.",photoButton:"Abrir fotografia",videoTitle:"Vídeo de exemplo",videoText:"Permite testar a pré-visualização, o ajuste de cor e a exportação.",videoButton:"Abrir vídeo",noticeTitle:"Guardar em Fotografias",notice:"Um site não pode adicionar ficheiros automaticamente à fototeca. Se abrir uma pré-visualização, use Partilhar no Safari e guarde em Fotografias.",privacy:"Este site não envia as suas fotografias e não utiliza rastreio nem análise."},
+"nl":{title:"DiveTone-voorbeeldmedia",subtitle:"Download een onderwaterfoto en -video om DiveTone meteen te proberen.",language:"Taal",introTitle:"Voordat je begint",intro:"Deze bestanden zijn alleen bedoeld om DiveTone te proberen. Bewaar ze eerst in Foto’s en voeg ze daarna toe in DiveTone.",stepsTitle:"Zo werkt het",steps:["Open de foto of video hieronder.","Kies in het Deel-menu van Safari voor Bewaar afbeelding of Bewaar video.","Ga terug naar DiveTone, tik op Voeg toe en selecteer het bestand in je fotobibliotheek."],photoTitle:"Voorbeeldfoto",photoText:"Ideaal om Klassiek, Natuurlijk en Levendig en de bediening van het onderwerpgebied te vergelijken.",photoButton:"Foto openen",videoTitle:"Voorbeeldvideo",videoText:"Test hiermee de videovoorvertoning, kleuraanpassing en export.",videoButton:"Video openen",noticeTitle:"Bewaren in Foto’s",notice:"Een website kan bestanden niet automatisch aan je bibliotheek toevoegen. Gebruik bij een voorvertoning de Deel-knop van Safari en bewaar het bestand in Foto’s.",privacy:"Deze site uploadt je foto’s niet en gebruikt geen tracking of analyse."},
+"th":{title:"สื่อตัวอย่าง DiveTone",subtitle:"ดาวน์โหลดภาพและวิดีโอใต้น้ำเพื่อทดลอง DiveTone ได้ทันที",language:"ภาษา",introTitle:"ก่อนเริ่ม",intro:"ไฟล์เหล่านี้มีไว้สำหรับทดลอง DiveTone เท่านั้น โปรดบันทึกลงแอปรูปภาพก่อน แล้วกลับมาเพิ่มใน DiveTone",stepsTitle:"วิธีใช้",steps:["เปิดภาพหรือวิดีโอด้านล่าง","ใช้เมนูแชร์ของ Safari แล้วเลือกบันทึกรูปภาพหรือบันทึกวิดีโอ","กลับไปที่ DiveTone แตะเพิ่ม แล้วเลือกสื่อจากคลังรูปภาพ"],photoTitle:"ภาพตัวอย่าง",photoText:"เหมาะสำหรับเปรียบเทียบสไตล์คลาสสิก ธรรมชาติ และสดใส รวมถึงการปรับพื้นที่ตัวแบบ",photoButton:"เปิดภาพ",videoTitle:"วิดีโอตัวอย่าง",videoText:"ใช้ทดสอบการแสดงตัวอย่าง การปรับสี และการส่งออกวิดีโอ",videoButton:"เปิดวิดีโอ",noticeTitle:"การบันทึกลงรูปภาพ",notice:"เว็บไซต์ไม่สามารถเพิ่มไฟล์ลงคลังโดยอัตโนมัติ หากเห็นเพียงตัวอย่าง ให้แตะปุ่มแชร์ใน Safari แล้วบันทึกลงรูปภาพ",privacy:"เว็บไซต์นี้ไม่อัปโหลดรูปภาพของคุณและไม่ใช้การติดตามหรือการวิเคราะห์"},
+"id":{title:"Media contoh DiveTone",subtitle:"Unduh foto dan video bawah air untuk langsung mencoba DiveTone.",language:"Bahasa",introTitle:"Sebelum memulai",intro:"File ini hanya untuk mencoba DiveTone. Simpan dahulu ke app Foto, lalu kembali ke DiveTone untuk menambahkannya.",stepsTitle:"Cara menggunakan",steps:["Buka foto atau video di bawah.","Gunakan menu Bagikan Safari lalu pilih Simpan Gambar atau Simpan Video.","Kembali ke DiveTone, ketuk Tambah, lalu pilih media dari perpustakaan foto."],photoTitle:"Foto contoh",photoText:"Cocok untuk membandingkan gaya Klasik, Alami, dan Cerah serta kontrol area subjek.",photoButton:"Buka foto",videoTitle:"Video contoh",videoText:"Gunakan untuk menguji pratinjau, penyesuaian warna, dan ekspor video.",videoButton:"Buka video",noticeTitle:"Menyimpan ke Foto",notice:"Situs web tidak dapat menambahkan file otomatis ke perpustakaan. Jika hanya pratinjau yang terbuka, gunakan Bagikan di Safari lalu simpan ke Foto.",privacy:"Situs ini tidak mengunggah foto Anda dan tidak memakai pelacakan atau analitik."},
+"ms":{title:"Media contoh DiveTone",subtitle:"Muat turun foto dan video bawah air untuk mencuba DiveTone sekarang.",language:"Bahasa",introTitle:"Sebelum bermula",intro:"Fail ini hanya untuk mencuba DiveTone. Simpan dahulu ke app Photos, kemudian kembali ke DiveTone untuk menambahkannya.",stepsTitle:"Cara menggunakan",steps:["Buka foto atau video di bawah.","Gunakan menu Kongsi Safari dan pilih Simpan Imej atau Simpan Video.","Kembali ke DiveTone, ketik Tambah dan pilih media daripada pustaka foto."],photoTitle:"Foto contoh",photoText:"Sesuai untuk membandingkan gaya Klasik, Semula Jadi dan Terang serta kawalan kawasan subjek.",photoButton:"Buka foto",videoTitle:"Video contoh",videoText:"Gunakan untuk menguji pratonton, pelarasan warna dan eksport video.",videoButton:"Buka video",noticeTitle:"Menyimpan ke Photos",notice:"Laman web tidak boleh menambah fail secara automatik ke pustaka. Jika pratonton dibuka, gunakan Kongsi dalam Safari dan simpan ke Photos.",privacy:"Laman ini tidak memuat naik foto anda dan tidak menggunakan penjejakan atau analitik."},
+"fil":{title:"Sample media ng DiveTone",subtitle:"Mag-download ng underwater na larawan at video para masubukan agad ang DiveTone.",language:"Wika",introTitle:"Bago magsimula",intro:"Para lamang sa pagsubok ng DiveTone ang mga file na ito. I-save muna sa Photos app, saka bumalik sa DiveTone para idagdag ang mga ito.",stepsTitle:"Paano gamitin",steps:["Buksan ang larawan o video sa ibaba.","Sa Share menu ng Safari, piliin ang Save Image o Save Video.","Bumalik sa DiveTone, i-tap ang Add, at piliin ang media sa photo library."],photoTitle:"Sample na larawan",photoText:"Mainam sa paghahambing ng Classic, Natural, at Vivid at pagsubok ng subject-area controls.",photoButton:"Buksan ang larawan",videoTitle:"Sample na video",videoText:"Gamitin sa pagsubok ng video preview, color adjustment, at export.",videoButton:"Buksan ang video",noticeTitle:"Pag-save sa Photos",notice:"Hindi awtomatikong makakapagdagdag ang website sa library. Kung preview lang ang bumukas, gamitin ang Share sa Safari at i-save sa Photos.",privacy:"Hindi ina-upload ng site na ito ang iyong mga larawan at wala itong tracking o analytics."},
+"vi":{title:"Nội dung mẫu DiveTone",subtitle:"Tải ảnh và video dưới nước để dùng thử DiveTone ngay.",language:"Ngôn ngữ",introTitle:"Trước khi bắt đầu",intro:"Các tệp này chỉ dùng để thử DiveTone. Hãy lưu vào ứng dụng Ảnh trước, sau đó quay lại DiveTone để thêm.",stepsTitle:"Cách sử dụng",steps:["Mở ảnh hoặc video bên dưới.","Dùng menu Chia sẻ của Safari và chọn Lưu hình ảnh hoặc Lưu video.","Quay lại DiveTone, chạm Thêm và chọn nội dung từ thư viện ảnh."],photoTitle:"Ảnh mẫu",photoText:"Phù hợp để so sánh phong cách Cổ điển, Tự nhiên và Sống động, cũng như điều chỉnh vùng chủ thể.",photoButton:"Mở ảnh",videoTitle:"Video mẫu",videoText:"Dùng để thử xem trước, chỉnh màu và xuất video.",videoButton:"Mở video",noticeTitle:"Lưu vào Ảnh",notice:"Trang web không thể tự động thêm tệp vào thư viện. Nếu chỉ thấy bản xem trước, hãy dùng nút Chia sẻ của Safari và lưu vào Ảnh.",privacy:"Trang này không tải ảnh của bạn lên và không dùng công cụ theo dõi hoặc phân tích."},
+"ar":{title:"وسائط DiveTone التجريبية",subtitle:"نزّل صورة وفيديو تحت الماء لتجربة DiveTone فوراً.",language:"اللغة",introTitle:"قبل البدء",intro:"هذه الملفات مخصصة لتجربة DiveTone فقط. احفظها أولاً في تطبيق الصور، ثم ارجع إلى DiveTone وأضفها.",stepsTitle:"طريقة الاستخدام",steps:["افتح الصورة أو الفيديو أدناه.","استخدم قائمة المشاركة في Safari واختر حفظ الصورة أو حفظ الفيديو.","ارجع إلى DiveTone واضغط «إضافة» واختر الوسائط من مكتبة الصور."],photoTitle:"صورة تجريبية",photoText:"مناسبة لمقارنة الأنماط الكلاسيكي والطبيعي والحيوي وتجربة نطاق الهدف.",photoButton:"فتح الصورة",videoTitle:"فيديو تجريبي",videoText:"استخدمه لاختبار معاينة الفيديو وتعديل الألوان والتصدير.",videoButton:"فتح الفيديو",noticeTitle:"الحفظ في تطبيق الصور",notice:"لا يمكن لموقع ويب إضافة الملفات تلقائياً إلى مكتبتك. إذا ظهرت معاينة فقط، استخدم زر المشاركة في Safari واحفظ الملف في الصور.",privacy:"لا يرفع هذا الموقع صورك ولا يستخدم التتبع أو أدوات التحليل."},
+"tr":{title:"DiveTone örnek medyası",subtitle:"DiveTone’u hemen denemek için su altı fotoğrafı ve videosu indirin.",language:"Dil",introTitle:"Başlamadan önce",intro:"Bu dosyalar yalnızca DiveTone’u denemek içindir. Önce Fotoğraflar uygulamasına kaydedin, sonra DiveTone’a dönüp ekleyin.",stepsTitle:"Nasıl kullanılır",steps:["Aşağıdaki fotoğrafı veya videoyu açın.","Safari’nin Paylaş menüsünden Görüntüyü Kaydet veya Videoyu Kaydet’i seçin.","DiveTone’a dönün, Ekle’ye dokunun ve medyayı fotoğraf arşivinden seçin."],photoTitle:"Örnek fotoğraf",photoText:"Klasik, Doğal ve Canlı stilleri karşılaştırmak ve konu alanı ayarlarını denemek için idealdir.",photoButton:"Fotoğrafı aç",videoTitle:"Örnek video",videoText:"Video önizleme, renk ayarı ve dışa aktarma işlemlerini test edin.",videoButton:"Videoyu aç",noticeTitle:"Fotoğraflar’a kaydetme",notice:"Bir web sitesi dosyaları arşivinize otomatik ekleyemez. Yalnızca önizleme açılırsa Safari’de Paylaş’a dokunup Fotoğraflar’a kaydedin.",privacy:"Bu site fotoğraflarınızı yüklemez ve izleme veya analiz kullanmaz."},
+"el":{title:"Δείγματα πολυμέσων DiveTone",subtitle:"Κατεβάστε υποβρύχια φωτογραφία και βίντεο για να δοκιμάσετε το DiveTone.",language:"Γλώσσα",introTitle:"Πριν ξεκινήσετε",intro:"Τα αρχεία προορίζονται μόνο για δοκιμή του DiveTone. Αποθηκεύστε τα πρώτα στις Φωτογραφίες και μετά προσθέστε τα στο DiveTone.",stepsTitle:"Τρόπος χρήσης",steps:["Ανοίξτε την παρακάτω φωτογραφία ή το βίντεο.","Στο μενού Κοινής χρήσης του Safari επιλέξτε αποθήκευση εικόνας ή βίντεο.","Επιστρέψτε στο DiveTone, πατήστε Προσθήκη και επιλέξτε το αρχείο από τη βιβλιοθήκη φωτογραφιών."],photoTitle:"Δείγμα φωτογραφίας",photoText:"Ιδανικό για σύγκριση Κλασικού, Φυσικού και Ζωντανού στυλ και ρύθμιση περιοχής θέματος.",photoButton:"Άνοιγμα φωτογραφίας",videoTitle:"Δείγμα βίντεο",videoText:"Για δοκιμή προεπισκόπησης, ρύθμισης χρώματος και εξαγωγής βίντεο.",videoButton:"Άνοιγμα βίντεο",noticeTitle:"Αποθήκευση στις Φωτογραφίες",notice:"Ένας ιστότοπος δεν μπορεί να προσθέσει αυτόματα αρχεία στη βιβλιοθήκη. Αν ανοίξει προεπισκόπηση, χρησιμοποιήστε την Κοινή χρήση του Safari και αποθηκεύστε στις Φωτογραφίες.",privacy:"Ο ιστότοπος δεν ανεβάζει τις φωτογραφίες σας και δεν χρησιμοποιεί παρακολούθηση ή αναλύσεις."}
+};
+
+function normalizeLanguage(code){
+  if(!code)return null;
+  const exact=Object.keys(T).find(key=>key.toLowerCase()===code.toLowerCase());
+  if(exact)return exact;
+  const lower=code.toLowerCase(),base=lower.split("-")[0];
+  if(base==="zh")return /hant|tw|hk|mo/.test(lower)?"zh-Hant":"zh-Hans";
+  if(base==="pt")return /br/.test(lower)?"pt-BR":"pt-PT";
+  return T[base]?base:null;
+}
+
+function bestLanguage(){
+  const query=normalizeLanguage(new URLSearchParams(location.search).get("lang"));
+  if(query)return query;
+  const saved=normalizeLanguage(localStorage.getItem("divetone-sample-language"));
+  if(saved)return saved;
+  for(const candidate of [...(navigator.languages||[]),navigator.language]){
+    const match=normalizeLanguage(candidate);
+    if(match)return match;
+  }
+  return "en";
+}
+
+function setText(id,value){document.getElementById(id).textContent=value}
+
+function render(lang,updateURL=false){
+  const code=normalizeLanguage(lang)||"en",t=T[code];
+  document.documentElement.lang=code;
+  document.documentElement.dir=code==="ar"?"rtl":"ltr";
+  document.title=t.title;
+  setText("title",t.title);setText("subtitle",t.subtitle);setText("languageLabel",t.language);
+  setText("introTitle",t.introTitle);setText("introText",t.intro);setText("stepsTitle",t.stepsTitle);
+  setText("photoTitle",t.photoTitle);setText("photoText",t.photoText);setText("photoButton",t.photoButton+" ↗");
+  setText("videoTitle",t.videoTitle);setText("videoText",t.videoText);setText("videoButton",t.videoButton+" ↗");
+  setText("noticeTitle",t.noticeTitle);setText("noticeText",t.notice);setText("privacyText",t.privacy);
+  const list=document.getElementById("stepsList");list.replaceChildren(...t.steps.map(step=>{const li=document.createElement("li");li.textContent=step;return li}));
+  document.getElementById("language").value=code;
+  localStorage.setItem("divetone-sample-language",code);
+  if(updateURL){const url=new URL(location.href);url.searchParams.set("lang",code);history.replaceState(null,"",url)}
+}
+
+const picker=document.getElementById("language");
+for(const [code,name] of Object.entries(languages)){const option=document.createElement("option");option.value=code;option.textContent=name;picker.appendChild(option)}
+picker.addEventListener("change",event=>render(event.target.value,true));
+render(bestLanguage());
+</script>
+</body>
+</html>
